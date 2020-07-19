@@ -17,6 +17,16 @@ namespace WindowsFormsApp4
         public Form1()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Id", typeof(int));
+            dt.Columns.Add("First Name", typeof(string));
+            dt.Columns.Add("Last Name", typeof(string));
+            dt.Columns.Add("Age", typeof(DateTime));
+            dt.Columns.Add("City", typeof(string));
+            DataRow dr = dt.NewRow();
+            dr = dt.NewRow();
+            dataGridView1.DataSource = dt;
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -25,6 +35,13 @@ namespace WindowsFormsApp4
         }
 
         private void addPerson1_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            DataRow dr = dt.NewRow();
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
