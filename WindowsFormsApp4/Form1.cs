@@ -19,6 +19,14 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void addPerson1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

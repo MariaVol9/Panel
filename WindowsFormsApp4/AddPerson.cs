@@ -23,12 +23,26 @@ namespace WindowsFormsApp4
         {
             Person person = new Person();
             person.id = int.Parse(Id.Text);
+            person.name =fname.Text;
+            person.family =lname.Text;
+            person.age = DateTime.Parse(age.Text);
+            person.city = city.Text;
 
 
 
 
             CustomerAPI customerAPI = new CustomerAPI();
             customerAPI.SaveCustomer(person);
+        }
+
+        private void AddPerson_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Id_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
